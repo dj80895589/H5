@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>纯CSS打造超科技感的卡片聚焦效果</title>
+    <style type="text/css">
+    html,body{
+        padding:0;
+        margin: 0;
+        background-color: black;
+    }
+
+    div#card{
+       position:relative;
+       width:400px;
+       height:200px;
+       border:1px solid #fff;
+       box-sizing:border-box;
+       margin:300px auto;
+       box-shadow:0 0 3px #b1db56;
+    }
+    div#card span.line{
+        display:block;
+        position:absolute;
+        transition:all 0.3s ease-in-out;
+    }
+    div#card span.line.left-line,
+    div#card span.line.right-line{
+        height: 0px;
+        border-left:1px solid #b1bd56;
+    }
+    div#card span.line.top-line,
+    div#card span.line.bottom-line{
+        width: 0px;
+        border-bottom:1px solid #b1bd56;
+    }
+    div#card span.line.left-line{
+        top:-150px;
+        left:-1px;
+    }
+    div#card span.line.right-line{
+        bottom:-150px;
+        right:-1px;
+    }
+    div#card span.line.top-line{
+        top:-1px;
+        right:-250px;
+    }
+    div#card span.line.bottom-line{
+        bottom:-1px;
+        left:-250px;
+    }
+    div#card:hover{
+        box-shadow: 0 0 15px #b1db56;
+    }
+    div#card:hover span.line.left-line,
+    div#card:hover span.line.right-line{
+        height:200px;
+    }
+    div#card:hover span.line.top-line,
+    div#card:hover span.line.bottom-line{
+        width:400px;
+    }
+    div#card:hover span.line.left-line{
+        top:0;
+    }
+    div#card:hover span.line.right-line{
+        bottom:0;
+    }
+    div#card:hover span.line.top-line{
+        right:0;
+    }
+    div#card:hover span.line.bottom-line{
+        left:0;
+    }
+
+    div#card:hover div.img-box img{
+        transform:rotate(360deg);
+    }
+    div#card div{
+        float:left;
+        width:190px;
+        height:200px;
+      
+        box-sizing:border-box;
+    }
+    div#card div.img-box{
+        padding:35px;
+    }
+    div#card div.img-box img{
+        width:100%;
+        height:100%;
+        transition :all 0.3s ease-in-out;
+    }
+    div#card div.text-box{
+        text-align:center;
+    }
+    div#card div.text-box h2,
+    div#card div.text-box h3{
+        color:#b1db56;
+    }
+    div#card div.text-box p{
+        color:#ccc;
+    }
+    
+    </style>
+</head>
+<body>
+     <div id="card">
+         <span class="line left-line"></span>
+         <span class="line right-line"></span>
+         <span class="line top-line"></span>
+         <span class="line bottom-line"></span>
+
+         <div class="img-box">
+            <img src="img/startPage.png" alt="" />
+        </div>
+        <div class="text-box">
+            <h2>一个科技的时代</h2>
+            <h3>需要科技感</h3>
+            <p>我们需要科技</p>
+            <p>科技展望未来</p>
+        </div> 
+     </div>
+</body>
+</html>

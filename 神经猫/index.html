@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>
+        title
+    </title>
+    <script src="easeljs.min.js"></script>
+    <script>
+function Circle(){
+    createjs.Shape.call(this);
+    this.setType=function(type){
+        this.Type=type;
+        switch (type){
+        case Circle.unused:this.setColor("#bbbbbb",25);
+        break;
+        case Circle.used:this.setColor("#ff6600",25);
+        break;
+        case Circle.cat:this.setColor("#0000ff",25);
+        break;
+    }
+}
+    this.setColor=function(color,radius){
+        this.graphics.beginFill(color);
+        this.graphics.drawCircle(0,0,radius);
+        this.graphics.endFill();
+    }
+    this.getType=function(){
+        return this.Type;
+    }
+    this.setType(1);
+}
+        Circle.unused=1;
+        Circle.used=2;
+        Circle.cat=3;
+        Circle.prototype=new createjs.Shape();
+    </script>
+    </head>
+        <body>
+              <canvas width="800px" height="800px" id="gameView"></canvas>
+              <script>
+                  //创建舞台
+var stage =new createjs.Stage("gameView");
+createjs.Ticker.setFPS(30);
+createjs.Ticker.addEventListener("tick",stage);
+var gameView=new createjs.Container();
+gameView.x=30;
+gameView.y=30;
+stage.addChild(gameView); 
+var arr=[[],[],[],[],[],[],[],[],[]];
+var catPosition;
+var mNone=-1;
+var mLeft=0;
+var mUpLeft=1;
+var mUpRight=2;
+var mRight=3;
+var mDownLeft=4;
+var mDownRight=5;
+function addCircles(){
+    for(var Y=0;Y<9;Y++){
+        for(var X=0;X<9;X++){
+            var Yuan=new Circle();
+            gameView.addChild(Yuan);
+            arr[X][Y]=Yuan;
+            Yuan.X=X;
+            Yuan.Y=Y;
+            Yuan.x=Y%2?X*55+25:X*55;
+            Yuan.y=Y*55;
+
+            if(X==4&&Y==4){
+            Yuan.setType(3);
+            catPosition=Yuan;
+            }else if(Math.random()<0.1){
+            Yuan.setType(Circle.used)
+            }
+            Yuan.addEventListener("click",circleClick);
+            }
+        }
+    }
+
+addCircles();
+function circleClick(event){
+    if(event.target.getType()!=Circle.cat){
+     event.target.setType(Circle.used);
+}
+
+    if(catPosition.X==0||catPosition.Y==0||catPosition.X==8||catPosition.Y==8){
+        alert("you lost!");
+}
+    var direction=getMoveDirection(catPosition);
+        switch(direction){
+           case mLeft:
+           catPosition.setType(Circle.unused);
+           catPosition=arr[catPosition.X-1][catPosition.Y];
+           catPosition.setType(Circle.cat);
+           break;
+           case mUpLeft:
+           catPosition.setType(Circle.unused);
+           catPosition=arr[catPosition.Y%2?catPosition.X:catPosition.X-1][catPosition.Y-1];
+           catPosition.setType(Circle.cat);
+           break;
+           case mUpRight:
+           catPosition.setType(Circle.unused);
+           catPosition=arr[catPosition.Y%2?catPosition.X:catPosition.X+1][catPosition.Y-1];
+           catPosition.setType(Circle.cat);
+           break;
+           case mLeft:
+           catPosition.setType(Circle.unused);
+           catPosition=arr[catPosition.X-1][catPosition.Y];
+           catPosition.setType(Circle.cat);
+           break;
+           case mDownRight:
+           catPosition.setType(Circle.unused);
+           catPosition=arr[catPosition.Y%2?catPosition.X+1:catPosition.X][catPosition.Y+1];
+           catPosition.setType(Circle.cat);
+           break;
+           case mDownLeft:
+           catPosition.setType(Circle.unused);
+           catPosition=arr[catPosition.Y%2?catPosition.X:catPosition.X-1][catPosition.Y+1];
+           catPosition.setType(Circle.cat);
+           break;
+           default:
+           alert("you are the winner!")
+           break;
+        }
+}
+function getMoveDirection(cat){
+    var distanceMap=[];        //判断猫的周围是否有可移动的点
+    var able=true;
+    for(var x=cat.X;x>=0;x--){                 //检测左侧是否可行
+        if(arr[x][cat.Y].getType()==Circle.used){
+              able=false;
+              distanceMap[mLeft]=cat.X-x;     //如果左侧没点，可以执行的距离是多少
+              break;
+        }
+    }
+    if(able){
+        return mLeft;
+    }         
+    able=true;                //检测左上是否可行
+    var x=cat.X,y=cat.Y;
+    while(true){
+        if(arr[x][y].getType()==Circle.used){
+            able=false;
+            distanceMap[mUpLeft]=cat.Y-y;
+            break;
+        }
+        if (y%2==0){
+             x--;
+        }
+        y--;
+        if(y<0||x<0){
+            break;
+        }
+    }
+    if(able){
+        return mUpLeft;
+    }
+    able=true;            //检测右上方是否可行
+    x=cat.X,y=cat.Y;
+    while(true){
+        if(arr[x][y].getType()==Circle.used){
+            able=false;
+            distanceMap[mUpRight]=catY-y;
+            break;
+        }
+        if(y%2==0){
+            x++;
+        }
+        y--;
+        if(y<0||x>8){
+            break;
+        }
+    }
+    if(able){
+        return mUpRight;
+    }
+    able=true;             //检测右边是否可行
+    for(var x=cat.X;x<9;x++){
+        if(arr[x][cat.Y].getType()==Circle.used){
+            able=false;
+            distanceMap[mRight]=x-cat.X;
+            break;
+        }
+    }
+    if(able){
+        return mRight;
+    }
+    able=true;          //检测右下是否可行
+    x=cat.X,y=cat.Y;
+    while(true){
+        if(arr[x][y].getType()=Circle.used){
+            able=false;
+            distanceMap[mDownRight]=y-cat.Y;
+            break;
+        }
+        if(y%2==1){
+            x++;
+        };
+        y++;
+        if(y>8||x>8){
+            break;
+        }
+    }
+    if(able){
+        return mDownRight;
+    }
+    able=true;                   //检测左下是否可行
+    x=cat.X,y=cat.Y;
+    while(true){
+        if(arr[x][y].getType()=Circle.used){
+            able=false;
+            distanceMap[mDownLeft]=y-cat.Y;
+            break;
+        }
+        if(y%2==0){
+            x--;
+        }
+        if(x<0||y>8){
+            break;
+        }
+    }
+        if(able){
+            return mDownLeft;
+        }
+        
+    
+    var maxDirection=-1;
+        var maxVal=-1;
+        for(var direction=0;direction<distanceMap.length;direction++){
+            if(distanceMap[direction]>maxVal){
+                maxVal=distanceMap[direction];
+                maxDirection=direction;
+            }
+        }
+        if(maxVal>1){
+            return maxDirection;
+        }else{
+            return mNone;
+        }
+    }
+
+              </script>
+            </body>
+</html>

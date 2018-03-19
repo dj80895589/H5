@@ -1,0 +1,36 @@
+function disp_prompt()
+  {
+  var name=prompt("请输入您的名字","Bill Gates")
+  if (name!=null && name!="")
+    {
+    document.write("你好！" + name + " 今天过得怎么样？")
+    }
+  }
+
+//prompt() 方法用于显示可提示用户进行输入的对话框。prompt(text,defaultText)
+
+
+var x  
+var mycars = new Array()  
+mycars[0] = "Saab"  
+mycars[1] = "Volvo"  
+mycars[2] = "BMW"  
+  
+for (x in mycars)  
+{  
+    document.write(mycars[x] + "<br />")  
+}  
+//For...In 声明用于对数组或者对象的属性进行循环/迭代操作
+
+
+ if(!confirm(txt))
+         {
+         document.location.href="/index.html"
+         }
+
+confirm() 方法用于显示一个带有指定消息和 OK 及取消按钮的对话框。
+如果用户点击确定按钮，则 confirm() 返回 true。如果点击取消按钮，则 confirm() 返回 false。
+
+JavaScript：写入 HTML 输出
+document.write("<h1>This is a heading</h1>");
+document.write("<p>This is a paragraph</p>");
