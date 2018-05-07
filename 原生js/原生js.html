@@ -1,0 +1,133 @@
+<!DOCTYPE HTML5>
+<html lang=zh-CN>  <!--语言标识，也可以在具体的标签中显示例如<body lang=zh-CN    -->
+<head>
+<title>原生js</title>
+<style type="text/css">
+
+</style>
+<script type="text/javascript"> 
+
+</script>
+</head>
+<body>
+<script src=".\scripts\原生js.js"></script>
+<p>
+JavaScript 能够直接写入 HTML 输出流中：
+</p>
+<script>
+document.write("<h1>This is a heading</h1>");
+document.write("<p>This is a paragraph.</p>");
+document.write("<p>This is a paragraph.</p>");
+var txt="Hello World!"
+
+document.write("<p>Big: " + txt.big() + "</p>")
+document.write("<p>Small: " + txt.small() + "</p>")
+
+document.write("<p>Bold: " + txt.bold() + "</p>")
+document.write("<p>Italic: " + txt.italics() + "</p>")
+
+document.write("<p>Blink: " + txt.blink() + " (does not work in IE)</p>")
+document.write("<p>Fixed: " + txt.fixed() + "</p>")
+document.write("<p>Strike: " + txt.strike() + "</p>")
+
+document.write("<p>Fontcolor: " + txt.fontcolor("Red") + "</p>")
+document.write("<p>Fontsize: " + txt.fontsize(16) + "</p>")
+
+document.write("<p>Lowercase: " + txt.toLowerCase() + "</p>")
+document.write("<p>Uppercase: " + txt.toUpperCase() + "</p>")
+
+document.write("<p>Subscript: " + txt.sub() + "</p>")
+document.write("<p>Superscript: " + txt.sup() + "</p>")
+
+document.write("<p>Link: " + txt.link("http://www.w3school.com.cn") + "</p>")
+// JavaScript String 对象
+// anchor()	创建 HTML 锚。
+// big()	用大号字体显示字符串。
+// blink()	显示闪动字符串。
+// bold()	使用粗体显示字符串。
+// charAt()	返回在指定位置的字符。
+// charCodeAt()	返回在指定的位置的字符的 Unicode 编码。
+// concat()	连接字符串。
+// fixed()	以打字机文本显示字符串。
+// fontcolor()	使用指定的颜色来显示字符串。
+// fontsize()	使用指定的尺寸来显示字符串。
+// fromCharCode()	从字符编码创建一个字符串。
+// indexOf()	检索字符串。
+// italics()	使用斜体显示字符串。
+// lastIndexOf()	从后向前搜索字符串。
+// link()	将字符串显示为链接。
+// localeCompare()	用本地特定的顺序来比较两个字符串。
+// match()	找到一个或多个正则表达式的匹配。
+// replace()	替换与正则表达式匹配的子串。
+// search()	检索与正则表达式相匹配的值。
+// slice()	提取字符串的片断，并在新的字符串中返回被提取的部分。
+// small()	使用小字号来显示字符串。
+// split()	把字符串分割为字符串数组。
+// strike()	使用删除线来显示字符串。
+// sub()	把字符串显示为下标。
+// substr()	从起始索引号提取字符串中指定数目的字符。
+// substring()	提取字符串中两个指定的索引号之间的字符。
+// sup()	把字符串显示为上标。
+// toLocaleLowerCase()	把字符串转换为小写。
+// toLocaleUpperCase()	把字符串转换为大写。
+// toLowerCase()	把字符串转换为小写。
+// toUpperCase()	把字符串转换为大写。
+// toSource()	代表对象的源代码。
+// toString()	返回字符串。
+// valueOf()	返回某个字符串对象的原始值。
+</script>
+
+<p>
+您只能在 HTML 输出流中使用 <strong>document.write</strong>。
+如果您在文档已加载后使用它（比如在函数中），会覆盖整个文档。
+</p>
+<button type="button" onclick="alert('Welcome!')">点击这里</button>
+<p id="change">
+JavaScript 能改变 HTML 元素的内容。
+</p>
+<button type="button" onclick="myFunction1()">点击这里</button>
+
+<img id="myimage" onclick="changeImage()" src=".\src\img\eg_bulboff.gif">
+<p>点击灯泡来点亮或熄灭这盏灯</p>
+<p id="changestyle">
+JavaScript 能改变 HTML 元素的样式。
+</p>
+<button type="button" onclick="myFunction2()">点击这里</button>
+<p>请输入数字。如果输入值不是数字，浏览器会弹出提示框。</p>
+
+<input id="demo" type="text">
+<button type="button" onclick="myFunction3()">点击这里</button>
+
+<h1>事件</h1>
+<h1 onclick="this.innerHTML='谢谢!'">请点击该文本</h1>
+<h2 onload="checkCookies()">用户进入或离开页面时被触发</h2>
+请输入你的英文名：<input type="text" id="fname" onchange="myFunction4()">
+<p>当你离开输入框时，被触发的函数会把你输入的文本转换为大写字母。</p>
+<div 
+onmouseover="mOver(this)" 
+onmouseout="mOut(this)" 
+style="background-color:#D94A38;width:200px;height:50px;padding-top:25px;text-align:center;">
+Mouse Over Me
+</div>
+<div 
+onmousedown="mDown(this)" 
+onmouseup="mUp(this)" 
+style="background-color:#D94A38;width:200px;height:50px;padding-top:25px;text-align:center;">
+点击这里
+</div>
+<p>
+getElementById()	返回带有指定 ID 的元素。</br>
+getElementsByTagName()	返回包含带有指定标签名称的所有元素的节点列表（集合/节点数组）。</br>
+getElementsByClassName()	返回包含带有指定类名的所有元素的节点列表。</br>
+appendChild()	把新的子节点添加到指定节点。</br>
+removeChild()	删除子节点。</br>
+replaceChild()	替换子节点。</br>
+insertBefore()	在指定的子节点前面插入新的子节点。</br>
+createAttribute()	创建属性节点。</br>
+createElement()	创建元素节点。</br>
+createTextNode()	创建文本节点。</br>
+getAttribute()	返回指定的属性值。</br>
+setAttribute()	把指定属性设置或修改为指定的值。</p>
+</body> 
+</html>
+

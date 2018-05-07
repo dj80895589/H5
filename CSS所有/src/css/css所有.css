@@ -1,0 +1,145 @@
+*{
+margin:0;
+padding:0;
+}
+/*±³¾°µÄcss*/
+.background p{
+/*background-color: gray; */
+padding: 20px;
+background-image:url(../img/apple.jpg);
+background-repeat:no-repeat;/*repeat,repeat-x,repeat-y	,no-repeatinherit*/
+background-position:center;
+background-attachment:fixed;/*scroll,fixed,inherit*/
+/*background-size:5px 5px or 50% 50%;*/
+/*background-clip 规定背景的绘制区域。  
+background-origin 规定背景图片的定位区域。*/
+}
+.text p{
+	text-indent: -5em;
+    text-align: center;     /*left,right,center,justify,inherit*/
+    word-spacing: 30px; 
+    letter-spacing: 20px;  
+    text-transform: uppercase;  /*none,uppercase,lowercase,capitalize*/
+    text-decoration: underline overline blink;/*none,underline,overline,line-through,blink*/
+    white-space: nowrap£»    /*normal,pre,£nowrap,pre-wrap,£pre-lin,inherit,white-space*/
+    direction: rtl;    /*ltr	rtl,inherit,direction*/
+    text-shadow: 5px 5px 5px #FF0000;
+    word-wrap:break-word; /*换行*/
+}
+body{
+    font-family: sans-serif;
+}
+.font{
+    font-family: Georgia, serif;
+    font-style:italic;       /*normal,italic,oblique*/
+    font-variant:small-caps; 
+    font-weight:bold;        /*normal,bold,bolder,lighter,100-900,400=normal,700=bold,inherit*/
+    font-size:200%;          /*xx-small,x-small,small,medium,large,x-large,xx-large,xx-small,xx-large,medium,smaller,larger,length,inherit,pixels/16=em*/
+}
+/*Á´½ÓµÄcss*/
+.href a:link{
+	color:#FF0000;	
+}
+.href a:visited{
+	color:#00FF00;  
+}
+.href a:hover{
+	color:#FF00FF;  
+}
+.href a:active{
+	color:#0000FF;  
+}
+.list ol{
+  list-style-type:square;
+}
+.waiweilunkuo{
+  width: 250px;
+}
+.waiweilunkuo p{
+  outline-style:dotted;
+  outline-color:#00ff00;
+  outline-width:5px;      /*none，thin，medium，thick，length*/
+}
+.border{
+  margin: 50px;   /*margin-top等等*/
+  padding: 50px;  /*padding-top等等*/
+  border-style:solid; /*border-top-style,none,hidden,dotted,dashed,solid,double,groove,ridge,inset,outset,inherit*/
+  border-width:thin medium thick 10px; /*border-top-width,thin,medium,thick,length,inherit*/
+  border-color:#ff0000 #0000ff;/*border-top-color,red,#ff0000,rgb(255,0,0)）,transparent,inherit*/
+  border-radius:25px;
+  box-shadow: 10px 10px 50px #888888;/*box-shadow: h-shadow v-shadow blur模糊距离 spread阴影尺寸 color inset内部阴影;*/
+  /*border-image：url(/i/border.png) 30 30 round or stretch;*/
+}
+.yidong p{
+  background-color: red;
+  transform: translate(5px,10px);
+}
+.xuanzhuan p{
+  background-color: red;
+  transform: rotate(30deg);
+  width: 300px;
+}
+.fangdasuoxiao p{
+  background-color: red;
+  transform: scale(1.1,1.6);
+}
+.fanzhuan p{
+  background-color: red;
+  transform: skew(30deg,20deg);
+  width: 50px;
+}
+.hebing p{
+  background-color: red;
+  transform:matrix(0.866,0.5,-0.5,0.866,0,0);
+  width: 50px;
+  /*旋转、缩放、移动以及倾斜元素。*/
+}
+.threed p{
+  background-color: red;
+  transform: rotateY(130deg);
+  width: 50px;
+  /*translate3d(x,y,z)，translateX(x)，translateY(y)，translateZ(z)，scale3d(x,y,z)，scaleX(x)，scaleY(y)，scaleZ(z)，rotate3d(x,y,z,angle)，rotateX(angle)，rotateY(angle)，rotateZ(angle)，perspective(n)*/
+}
+.guodu{
+  float: left;
+  position: absolute;
+  width: 400px;
+}
+.guodu p{
+  background-color: yellow;
+  width: 200px;
+  height: 50px;
+  transition:width 2s,height 2s,transform 2s;
+}
+.guodu p:hover{
+  width: 300px;
+  height: 150px;
+  transform:rotate(180deg);
+}
+.donghua{
+  float: right;
+width:100px;
+height:100px;
+background:red;
+position:relative;
+animation-name:myfirst;
+animation-duration:5s;
+animation-timing-function:linear;
+animation-delay:2s;
+animation-iteration-count:infinite;
+animation-direction:alternate;
+animation-play-state:running;
+}
+@keyframes myfirst
+{
+0%   {background:red; right:0px; top:0px;}
+25%  {background:yellow; right:200px; top:0px;}
+50%  {background:blue; right:200px; top:200px;}
+75%  {background:green; right:0px; top:200px;}
+100% {background:red; right:0px; top:0px;}
+}
+.newspaper{
+  column-count:3;
+  column-gap:40px;
+  column-rule:3px outset #ff0000;
+}

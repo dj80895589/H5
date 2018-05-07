@@ -1,0 +1,31 @@
+﻿<!DOCTYPE HTML5>
+<html lang=zh-CN>  <!--语言标识，也可以在具体的标签中显示例如<body lang=zh-CN    -->
+<head>
+<title>HTML5</title>
+<style type="text/css">
+#div1,#div2{float:left;width:50px; height:50px;padding:10px;border:1px solid #aaaaaa;}
+img{margin-left:25px;}
+</style>
+<script type="text/javascript"> 
+function allowDrop(ev) 
+{
+ev.preventDefault(); 
+}  
+function drag(ev) { 
+ev.dataTransfer.setData("Text",ev.target.id); 
+}  
+function drop(ev) { 
+ev.preventDefault(); 
+var data=ev.dataTransfer.getData("Text"); 
+ev.target.appendChild(document.getElementById(data)); 
+} 
+</script>
+</head>
+<body>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>  
+    
+<!--默认是无法把元素放到另一个元素中去的-->
+<img id="drag1" src=".\src\img\apple.png" alt="苹果" width="20px" height="20px" ondragstart="drag(event)" width="336" height="69" />
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>  
+</body> 
+</html>

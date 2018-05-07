@@ -1,0 +1,177 @@
+﻿<!DOCTYPE HTML5>
+<html lang=zh-CN>  <!--语言标识，也可以在具体的标签中显示例如<body lang=zh-CN    -->
+<head>
+	<meta name="keywords" content="音乐，html，流行"> <!--name属性用来描述网页，以便搜索引擎查找和分类 name是属性名称，content是具体的关键字         -->
+	<meta name="description" content="html的所有结构">
+	<meta name="generator" content="sublime text">  <!--设置网页的编辑工具   -->  
+	<meta name="author" content="作者的姓名">  
+	<meta name="robots" content="all">  
+	<!--设置网页的搜索方式-->
+	<meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">  <!--设置编码方式选择语言-->
+	<!--<meta http-equiv="refresh" content="3;url=http://www.sina.com.cn">  3秒后自动跳转到网页-->
+	<meta http-equiv="expires" content="web,14 september 2017 16:20:00GMT">  <!--设置网页到期的时间，一旦过期从服务器重新调用-->
+	<meta http-equiv="cache-control" content="no-cache">  <!--设置网页缓存禁止调用-->
+	<meta http-equiv="pragma" content="no-cache">  <!--设置网页缓存禁止调用-->
+	<meta http-equiv="set-cookie" content="web,14 september 2017 16:20:00GMT">  <!--到期删除过期的cookie-->
+	<meta http-equiv="windows-target" content="_top">  <!--强制网页在当前窗口中以独立的页面显示-->
+	<meta http-equiv="pageenter" content="revealtrans(duration=3,transition=1)">  <!--pageenter和page-exist分别为进入页面和退出页面（一般为两个页面互相进入和退出）-->
+	<title>html所有结构</title>   <!--   -->
+
+<style type="text/css">
+body{background-repeat:no-repeat}
+</style>
+
+</head>
+<!--<base href="基底网址标记" target="新窗口的打开方式">此处设置网页绝对位置，以后定义链接就可以写相对位置，通过基地网址标记<base>转化为html的绝对位置-->
+
+<body bgcolor="#000055" text="#ffffff" background="C:\Users\Administrator\Desktop\全网通X展架.png" bgproperties="fixed" link="#ff0000" alink="#99ff00" vlink="#cccccc" topmargin="50px" leftmargin="50px">
+	<!--background属性bgproperties默认全铺 会重复
+		link是链接文字的颜色   alink是正在访问的链接的颜色  vlink是访问后链接文字的颜色-->
+<a href="http://www.sina.com.cn" target="_self">新浪网站</a><br/>      <!--target打开方式_self本窗口打开  _blank新建一个窗口打开-->
+<a href="#书签1">书签1</a><br/> <!--如果需要连接到其他页面，#前面加上其它页面名-->
+<!--<a href="ftp://地址"--><!--<a href="mailto：邮箱地址"    用来发送邮件--><!--<a href="文件所在地址"    用来下载文件--><!--<a href="javascript：脚本" -->
+	<div width="300px">
+		<h1 align="left">第一行</h1>
+	    <h2 align="center">第二行</h2>
+        <h3 align="right">第三行</h3>
+        <h4>第四行</h4>
+        <h5>第五行</h5>
+        <h6>第六行</h6>
+        <font face="华文彩云" size="5" color="#f35">曲项向天歌</font><br/>
+        <strong>粗体的文字</strong><br/>
+        <em>斜体的文字</em><br/>
+        <u>带下划线的文字</u><br/>
+        <strike>带删除线的文字</strike><br/>
+        <code>等宽的文字</code><br/>
+        <samp>等宽的文字</samp><br/>
+        不<span>等宽的文字</span>
+        <p>段落</p>
+        <nobr>不换行底部出现滚动条AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</nobr>  
+        <pre>                              保留                           文字                         排版                       效果</pre>
+        <center>中间的文字和元素居中</center>
+        <hr width="50px" height="5px" color="#f35" align="left" noshade="noshade">    <!--noshade去掉水平线阴影-->
+        <rudy>文本内容<br><rt>小字介绍</rt></rudy>    <!--好像没什么用-->
+        <!--<plaintext>和<xmp>使标记失去作用，只有开头没有结尾-->
+        	<address>地址位置</address>   <!--会显示斜体-->
+    </div>
+    <div>
+    	<ol type="A" start="4">
+    	<li>第一行</li>
+    	<li>第二行</li>
+    	<li>第三行</li>
+    	<li>第四行</li>
+       </ol>
+       <ul type="circle">
+    	<li>第一行</li>
+    	<li>第二行</li>
+    	<li>第三行</li>
+    	<li>第四行</li>
+       </ul>
+       <dl>
+           <dt>A</dt><dd>A的解释</dd>
+           <dt>B</dt><dd>B的解释</dd>
+       </dl>
+       <a>目录形式</a>
+    <dir>    <!--上一行字变成目录形式-->
+    	<li>第一行</li>
+    	<li>第二行</li>
+    	<li>第三行</li>
+    	<li>第四行</li>
+    </dir>
+    <a name="书签1">锚点</a>
+    </div>
+    <div>
+    	<span>123</span>
+    	<img src="C:\Users\Administrator\Desktop\全网通X展架.png" height="100px" width="100px" border="10" hspace="50px" vspace="100px" align="middle" alt="图像的提示文字"> <!--hspace水平间距 vspace垂直间距  和其他标记的距离-->
+    	<a href="http://www.sina.com.cn" target="_self"><img src="C:\Users\Administrator\Desktop\全网通X展架.png" height="100px" width="100px" border="10" hspace="50px" vspace="100px" align="middle" alt="为图片添加超链接" usemap="#map"></a>
+    	<map name="map">
+            <area sharp="rect" coords="0,0,30,30" href="http://www.ifeng.com" alt="凤凰网">
+    	</map>    <!--<map>设置图片热力地图，图片链接后面加入<usemap>-->
+    	</div>  
+    	<div>
+    		<table width="400px" height="300px" align="center" border="5" bordercolor="#ff0000" cellspacing="5px" cellpadding="50px" bgcolor="f35">
+    			<caption>表格标题</caption>  <!--table可以用的属性在横列和表头都可以用-->
+    			<tr>
+    				<th>表头</th>
+    				<th>表头</th>
+    				<th>表头</th>
+    				<th>表头</th>
+    				<th>表头</th>
+    		    </tr>
+    			<tr>
+    				<td>横</td>
+    			    <td>横</td>
+    		        <td>横</td>
+    		        <td>横</td>
+    		        <td>横</td>
+    		    </tr>
+    		    <tr>
+    				<td colspan="2">横</td>   <!--colspan跨行   rowspan 跨列    bordercolorlight亮边框就是下边和右边  bordercolordark就是上边和左边   属性为颜色   thead   tbody   tfoot可以为头 身 尾统一设置属性-->  
+    			    <td>横</td>
+    		        <td>横</td>
+    		    </tr>
+    		</table></div>
+    		<div id="层" align="center" class="层的标记" style="width:50%; height:100px;letter-spacing: 0.2em; display: block"> <!--visiblity是不显示但是div仍然占据原有位置，display:none不占据原有位置-->
+    			帅帅帅帅帅123
+    			<span>123</span><!--div一般用来做布局，span一般用来做文字效果-->
+    			<iframe src="子页面内容" width="50px" height="50px" name="框架名称" scrolling="yes" align="left" marginwidth="30px"><!--scrolling滚动条显示与否-->123
+    			</iframe>
+    		</div>
+    		<div>
+                 <form action="mail:80895589@qq.com" name="表单名称" method="get" enctype="text/plain" target="_blank">
+                 	<input type="text" name="表单控件" size="5" maxlength="5" placeholder="输入框提示">
+                 	<input type="password" name="密码控件">
+                 	<input type="radio" name="单选" value="123">123<!--value是选中后传到后台的值,name设置成一样所有单选框就只能选中一个-->
+                 	<input type="radio" name="单选" value="456">456
+                 	<input type="radio" name="单选" value="789">789
+                 	<input type="checkbox" name="复选" checked="checked" value="123">123
+                 	<input type="checkbox" name="复选" value="456">456
+                 	<input type="button" name="按钮" value="按钮"><br/>
+                 	<input type="submit" name="提交" value="提交"><br/>
+                 	<input type="reset" name="重置" value="重置"><br/><!--重置同一个form下的控件-->
+                 	<input type="image" name="图片域" src="C:\Users\Administrator\Desktop\全网通X展架.png" width="50px" height="50px"><br/>
+                 	上传文件<input type="file" name="文件域"><br/>
+                 	<select>
+                 		<option value="xuanxiangyi">选项一</option>
+                 	    <option value="xuanxianger" selected="selected">选项二</option>
+                 	    <option value="xuanxiangsan">选项三</option>
+                 	    <option value="xuanxiangsi">选项四</option>
+                    </select>
+                    <textarea value="默认值" rows="5" cols="50"></textarea>
+                 	<!--size控件长度，maxlength控件最长允许的字符串-->
+                    <!--常用type:password、单选radio、复选checkbox（默认选中是checked="checked"）按钮button提交按钮submit重置reset图像域image用在按钮上的图片隐藏域hidden用户看不见的  文件域file 菜单列表域option 默认选中项是selected="selected" 文本域标记textarea   控件id--> 
+                 </form>
+    		</div>
+    		<div>
+                 <marquee direction="right" width="500" height="30" bgcolor="#ccffcc" hspace="90px" vspace="90px"><font face="隶书" color="#0066ff" size="5">滚动的文字</font></marquee>
+                 <marquee behavior="alternate" scrollamount="100" scrolldelay="500" loop="1"><font face="隶书" color="#0066ff" size="5">设置滚动方式和滚动的速度、滚动的延迟、loop循环次数</font></marquee>
+    		</div>
+    		<div>
+    			<q>引用标签，会在文字上打上双引号</q></div>
+</body>
+</html>
+
+
+
+	空格	           &nbsp;	&#160;             </br>
+<	小于号	           &lt;	        &#60;              </br>
+>	大于号	           &gt;	        &#62;              </br>
+&	和号	           &amp;	&#38;              </br>
+"	引号	           &quot;	&#34;              </br>
+'	撇号 	           &apos; (IE不支持)	&#39;      </br>
+￠	分（cent）	   &cent;	&#162;             </br>
+£	镑（pound）	   &pound;	&#163;             </br>
+¥	元（yen）	   &yen;	&#165;             </br>
+€	欧元（euro）	   &euro;	&#8364;            </br>
+§	小节	           &sect;	&#167;             </br>
+©	版权（copyright）  &copy;	&#169;             </br>
+®	注册商标	   &reg;	&#174;             </br>
+™	商标	           &trade;	&#8482;            </br>
+×	乘号	           &times;	&#215;             </br>
+÷	除号	           &divide;	&#247;             </br>
+
+<div>
+<bgsound src="背景音乐位置" loop="1"></bgsound>
+<!-- <embed src="E:\工作\录制\PDM基本操作\视频\开端.avi" width="200" height="240" autostart="true" loop="true" hidden="false"></embed> hidden隐藏视频只出现声音-->
+<img src=".\src\img\apple.png" alt="苹果" width="20px" height="20px">
+</div>

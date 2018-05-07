@@ -1,0 +1,95 @@
+*{
+	margin:0px;
+	padding: 0px;
+}
+.nicheng{
+	margin-top:30px;
+	margin-left: 200px;
+	height: 50px;
+}
+.nicheng a{
+	font-size: 30px;
+	vertical-align:middle;
+}
+.nicheng input{
+	border-radius: 20px;
+	height: 50px;
+	width: 1300px;
+	border-color: lightblue; 
+	font-size:20px;
+	width: 80%;
+	vertical-align:middle;
+}
+.liuyan{
+	margin-top: 50px;
+    margin-left: 200px;
+}
+.liuyan a{
+	font-size: 30px;
+	vertical-align:top;
+}
+.liuyan textarea{
+	border-radius: 20px;
+    height: 300px;
+	width: 80%;
+	border-color: lightblue; 
+	font-size: 30px;
+}
+.anniu{
+	margin-top: 30px;
+	margin-left: 305px;
+}
+.tijiao{
+	width: 100px;
+	height: 50px;
+	background-color: green;
+	border-radius: 10px;
+	margin-right: 20px;
+}
+.chakan{
+	width: 100px;
+	height: 50px;
+	background-color: red;
+	border-radius: 10px;
+	margin-right: 20px;
+}
+.shanchu{
+	width: 100px;
+	height: 50px;
+	background-color: blue;
+	border-radius: 10px;
+	margin-right: 20px;
+}
+.panel{
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	height: 50px;
+	background-color: lightblue;
+}
+.list{
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	height: auto;
+	min-height:50px;   /*高度自适应设置最小高度*/
+}
+.list1{
+	list-style: none;
+	height: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.list1 li{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.bottom{
+	margin-top: 30px;
+	width: 75%;
+    margin-left: 200px;
+	margin-right: auto;
+    border-color:lightblue;
+    border:solid 3px lightblue;
+    border-radius: 15px;
+}

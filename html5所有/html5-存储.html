@@ -1,0 +1,32 @@
+﻿<!DOCTYPE HTML5>
+<html lang=zh-CN>  <!--语言标识，也可以在具体的标签中显示例如<body lang=zh-CN    -->
+<head>
+<title>HTML5存储</title>
+<style type="text/css">
+
+</style>
+
+<body>
+<div id="result"></div>
+</body> 
+
+<script type="text/javascript">
+// localStorage - 没有时间限制的数据存储
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+// Store
+    localStorage.setItem("lastname", "Gates");
+// Retrieve
+    document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+} 
+else {
+    document.getElementById("result").innerHTML = "抱歉！您的浏览器不支持 Web Storage ...";
+}
+//sessionStorage - 针对一个 session 的数据存储
+sessionStorage.lastname="Smith";
+document.write(sessionStorage.lastname);
+</script>
+
+</head>
+
+</html>

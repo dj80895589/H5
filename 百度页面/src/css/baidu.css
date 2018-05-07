@@ -1,0 +1,125 @@
+﻿*{
+margin: 0px;
+padding: 0px;
+}
+.header{
+	height: 60px;
+	line-height:60px;
+}
+.header .navleft li{
+	float: left;
+}
+.header .navright li{
+	float: right;
+}
+.header li a{
+	color: #333;
+	font-weight: 700;
+	font-size: 13px;
+	margin-right: 20px;
+}
+.header li a:hover{
+   color: #00c;
+}
+.header li .gray{
+	font-weight: 100;
+}
+.header li .more{
+	background:#38f;
+	text-decoration:none:
+	font-weight:400;
+	color: #fff;
+	padding:4px;
+	margin-right:12px; 
+}
+.search{
+	margin-top: 40px;
+
+}
+.search .logo{
+	text-align: center;
+}
+.search .logo img{
+	width: 270px;
+	height: 129px;
+}
+.search .keyWord{
+	margin-top: 20px;
+	text-align: center;
+}
+.search .keyWord form div{
+	display: inline-block;
+}
+.search .keyWord form .inpWrapper{
+	position:relative;
+}
+.search .keyWord form .inpWrapper input{
+	width: 539px;
+	height: 34px;
+	border: 1px solid #b6b6b6;
+}
+.search .keyWord form .inpWrapper span{
+	position: absolute;
+	right: 0px;
+    top: 50%;
+    margin-top: -16px;
+	width: 34px;
+	height: 32px;
+	background-image: url("../img/c.png");
+    background-repeat: no-repeat;
+    background-position:50% 50%;
+}
+.search .keyWord form .inpWrapper span:hover{
+	cursor: pointer;
+	background-color: blue;
+}
+.search .keyWord form .inpWrapper{
+	vertical-align: top;
+}
+.search .keyword .btnWrapper input{
+	margin-left: -8px;
+}
+.search .keyword .btnWrapper input{
+	width: 100px;
+	height:34px;
+	background-color: #3385ff;
+	cursor: pointer;
+	color: #ffff;
+	font-size: 15px;
+	border: none;
+}
+.bottom{
+	position: fixed;
+	text-align: center;
+	top: 600px;
+	font-size: 15px;
+	color: #999;  
+	width: 100%; 
+}
+.hand{
+        text-align: center;
+}
+.apple{
+	position: fixed;
+	top: 410px;
+	left: 970px;
+}
+.apple img{
+    width: 30px;
+}
+.hand img{
+        height:1px;
+        width:150px;
+        transition:all 0.3s ease-in-out;
+}
+.hand img:hover{
+        height:200px;
+    }
+.bottom a{
+	margin-left: 5px;
+}
+.bottom span{
+	margin-left: 5px;
+}
+
+
